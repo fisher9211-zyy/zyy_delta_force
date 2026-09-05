@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#121416" />
+  <title>Random Force+ — 三角洲行动随机配装</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">三角洲行动随机配装</p>
+        <h1>RANDOM <span>FORCE</span><sup>+</sup></h1>
+        <p class="subtitle">玩家自制版本 • 基于 Random Force 公开数据源</p>
+      </div>
+      <div class="header-actions">
+        <button id="spinAllBtn" class="primary">全部开始</button>
+        <button id="stopAllBtn" class="secondary">全部停止</button>
+      </div>
+    </header>
+
+    <section id="statusBar" class="statusbar">
+      <span class="status-dot"></span>
+      <span id="statusText">正在加载 Random Force 数据…</span>
+    </section>
+
+    <section class="tier-filter" aria-label="装备等级筛选">
+      <div class="tier-filter-copy">
+        <div>
+          <p class="eyebrow">ROLL FILTER</p>
+          <h2>装备等级筛选</h2>
+        </div>
+        <p>开始随机前可多选允许出现的装备等级。仅作用于头盔、护甲、胸挂和背包；弹药等级独立随机。</p>
+      </div>
+      <div class="tier-filter-buttons" id="tierFilterButtons">
+        <button class="tier-filter-btn active" data-tier="all">全部</button>
+        <button class="tier-filter-btn active" data-tier="2" aria-pressed="true">2级</button>
+        <button class="tier-filter-btn active" data-tier="3" aria-pressed="true">3级</button>
+        <button class="tier-filter-btn active" data-tier="4" aria-pressed="true">4级</button>
+        <button class="tier-filter-btn active" data-tier="5" aria-pressed="true">5级</button>
+      </div>
+    </section>
+
+    <section id="slotGrid" class="slot-grid" aria-label="随机轮盘"></section>
+
+    <section class="dice-grid">
+      <article class="mini-randomizer">
+        <div class="mini-heading">
+          <span>谁来改枪</span>
+          <span class="mini-tag">随机分配</span>
+        </div>
+        <button class="dice-value" id="gunModderValue">自己</button>
+        <button class="mini-spin" id="gunModderBtn">重新随机</button>
+      </article>
+
+      <article class="mini-randomizer">
+        <div class="mini-heading">
+          <span>枪械改装预算</span>
+          <span class="mini-tag">哈夫币</span>
+        </div>
+        <button class="dice-value" id="budgetValue">200K</button>
+        <button class="mini-spin" id="budgetBtn">重新随机</button>
+      </article>
+    </section>
+
+    <section class="extra-randomizers" aria-label="额外随机项目">
+      <article class="compact-randomizer event-randomizer">
+        <div class="compact-heading">
+          <div>
+            <p class="eyebrow">RANDOM EVENT</p>
+            <h2>随机事件任务</h2>
+          </div>
+          <span class="mini-tag">独立轮盘</span>
+        </div>
+        <div class="extra-inline-row event-inline-row">
+          <button class="compact-spin" id="randomEventBtn" disabled>抽取</button>
+          <div class="compact-value" id="randomEventValue">待添加数据</div>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <p><strong>Unofficial Delta Force fan-made tool.</strong> 非官方《三角洲行动》玩家自制工具，与游戏发行方、开发方无官方关联。</p>
+      <p>基础数据与原有物品图片直接读取自 <a href="https://random-force.corke.dev/" target="_blank" rel="noopener noreferrer">Random Force by Shotski</a> 的公开项目资源；<a href="https://github.com/tomcorke/random-force" target="_blank" rel="noopener noreferrer">查看原项目源码</a>。</p>
+      <p class="new-items">本版本自定义内容： <strong>蝶 • 液氮 • 回响 • MCX • RM277 • AR57 • SVCH • 刀 • 弹药4级/5级 • 自定义事件与概率</strong></p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
