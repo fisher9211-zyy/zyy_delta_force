@@ -9,8 +9,6 @@
 - Original site: https://random-force.corke.dev/
 - Original source: https://github.com/tomcorke/random-force
 
-因此本版本 **不是完全离线版**。如果 GitHub Raw 或原项目资源暂时不可访问，程序会对基础数据使用内置备用池；原物品图片可能无法显示。
-
 ## 保留的自定义规则
 
 - 地图仅 Zero Dam / Space City，概率 75% / 25%
@@ -26,10 +24,6 @@
 - 枪械改装预算：0 / 100K / 200K / 300K / 400K / 500K / 600K / 无限
 - 自定义随机事件；无事件固定 50%，其他具体事件合计 50%
 - 随机事件单击后立即出结果
-
-## 发布
-
-这是纯静态网站。将 `index.html`、`style.css`、`app.js` 上传到 GitHub Pages、Netlify 或 Vercel 即可。
 
 ## Notice
 
